@@ -1,0 +1,12 @@
+github lib praw: https://github.com/praw-dev/praw
+reddit guild: https://rymur.github.io/setup#:~:text=make%20our%20request.-,The%20URL%20field%20specifies%20which%20API%20endpoint%20we%20need%20to,urlencoded%E2%80%9D%20according%20to%20the%20API.
+https://towardsdatascience.com/how-to-use-the-reddit-api-in-python-5e05ddfd1e5c
+Refresh daily with selected reddit subs(by url)
+back-end:
+    python script to pull redit data
+    database?!?
+    django api:
+        GET: 
+        POST: add subreddit watch
+front-end:
+    react + typescript:
