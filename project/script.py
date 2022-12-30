@@ -4,6 +4,8 @@ import requests
 import datetime
 import json
 from dotenv import load_dotenv
+from datetime import datetime
+from pymongo import MongoClient
 load_dotenv()
 
 API_SECRET = os.getenv('API_SECRET')
@@ -17,7 +19,7 @@ reddit = praw.Reddit(
     user_agent="testscript",
     username= DEV_USERNAME,
 )
-current_date = datetime.datetime.now()
+current_date = datetime.now()
 
 submissions = reddit.subreddit("learnpython")
 todays_posts = submissions.new()
@@ -28,8 +30,9 @@ for post in todays_posts:
     post_dict = {
       "title": post.title,
       "author": post.author.name,
-      "url": post.url
-    }
+      "url": post.url,
+      "created_utc": datetime.utcfromtimestamp(post.created_utc).strftime('%Y-%m-%d %H:%M:%S')
+      }
     # Convert the dictionary to a JSON object and print it
     post_json = json.dumps(post_dict, indent=2)
     print(post_json)
