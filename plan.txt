@@ -10,3 +10,37 @@ back-end:
         POST: add subreddit watch
 front-end:
     react + typescript:
+
+
+data schema: 
+{
+    first_name:"john",
+    last_name:"doe",
+    reddit_follows:
+        ["csquestions":
+            ["1":{
+                "title": "blabla"
+                "author": "john hoj"
+                "url": "reddit.com:
+                "created_utc": "20/20/20"},
+            "2":{
+                "title": "blabla"
+                "author": "john hoj"
+                "url": "reddit.com:
+                "created_utc": "20/20/20"}
+            ],
+        "javaquestions":
+            ["1":{
+                "title": "blabla"
+                "author": "john hoj"
+                "url": "reddit.com:
+                "created_utc": "20/20/20"},
+            "2":{
+                "title": "blabla"
+                "author": "john hoj"
+                "url": "reddit.com:
+                "created_utc": "20/20/20"}
+            ]
+        ],
+
+}
