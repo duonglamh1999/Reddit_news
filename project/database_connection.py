@@ -8,8 +8,8 @@ from datetime import datetime
 from pymongo import MongoClient
 load_dotenv()
 
-CLUSTER = os.getenv('CLUSTER')
-client = MongoClient(CLUSTER)
+MONGO_CLUSTER = os.getenv('MONGO_CLUSTER')
+client = MongoClient(MONGO_CLUSTER)
 
 print(client.list_database_names())
 db= client.news

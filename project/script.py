@@ -8,16 +8,16 @@ from datetime import datetime
 from pymongo import MongoClient
 load_dotenv()
 
-API_SECRET = os.getenv('API_SECRET')
-DEV_ID = os.getenv('DEV_ID')
-DEV_USERNAME= os.getenv('DEV_USERNAME')
-DEV_PASSWORD =os.getenv('DEV_PASSWORD')
+REDDIT_API_SECRET = os.getenv('REDDIT_API_SECRET')
+REDDIT_DEV_ID = os.getenv('REDDIT_DEV_ID')
+REDDIT_DEV_USERNAME= os.getenv('REDDIT_DEV_USERNAME')
+REDDIT_DEV_PASSWORD =os.getenv('REDDIT_DEV_PASSWORD')
 reddit = praw.Reddit(
-    client_id=DEV_ID,
-    client_secret= API_SECRET,
-    password=DEV_PASSWORD,
+    client_id=REDDIT_DEV_ID,
+    client_secret= REDDIT_API_SECRET,
+    password=REDDIT_DEV_PASSWORD,
     user_agent="testscript",
-    username= DEV_USERNAME,
+    username= REDDIT_DEV_USERNAME,
 )
 current_date = datetime.now()
 

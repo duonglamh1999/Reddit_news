@@ -16,7 +16,7 @@ data schema:
 {
     first_name:"john",
     last_name:"doe",
-    reddit_follows:
+    subreddit:
         ["csquestions":
             ["1":{
                 "title": "blabla"
